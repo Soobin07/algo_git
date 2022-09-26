@@ -1,4 +1,4 @@
-package algo;
+package beakjoon.silver;
 
 import java.util.HashSet;
 import java.util.Scanner;

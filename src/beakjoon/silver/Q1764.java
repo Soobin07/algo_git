@@ -1,4 +1,4 @@
-package algo;
+package beakjoon.silver;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -10,17 +10,17 @@ import java.util.List;
 import java.util.Set;
 import java.util.StringTokenizer;
 
-public class Q1764 { //(µèº¸Àâ)
+public class Q1764 { //(ï¿½èº¸ï¿½ï¿½)
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(br.readLine());
-		int N = Integer.parseInt(st.nextToken());	//µèµµ ¸øÇÑ »ç¶÷ ¼ö
-		int M = Integer.parseInt(st.nextToken());	//º¸µµ ¸øÇÑ »ç¶÷ ¼ö
+		int N = Integer.parseInt(st.nextToken());	//ï¿½èµµ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½
+		int M = Integer.parseInt(st.nextToken());	//ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½
 		
 		Set<String> set = new HashSet<>();
 		for(int i = 0 ; i < N ; i++) {
 			set.add(br.readLine());
-		}//µèµµ ¸øÇÑ »ç¶÷ ³Ö±â
+		}//ï¿½èµµ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½Ö±ï¿½
 		
 		List<String> ans = new ArrayList<>();
 		for(int i = 0 ; i < M ; i++) {
@@ -28,7 +28,7 @@ public class Q1764 { //(µèº¸Àâ)
 			if(set.contains(name)) {
 				ans.add(name);
 			}
-		}//º¸µµ ¸øÇÑ »ç¶÷ ³Ö±â
+		}//ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½Ö±ï¿½
 		
 		StringBuffer sb = new StringBuffer();
 		Collections.sort(ans);

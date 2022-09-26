@@ -1,4 +1,4 @@
-package algo;
+package beakjoon.silver;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -15,7 +15,7 @@ public class Q11725 {
 		list = new ArrayList[N+1];
 		for(int i = 0 ; i <= N ; i++) {
 			list[i] = new ArrayList<>();
-		}//null¿¡·¯ ¾È³ª°Ô Ã³¸®
+		}//nullï¿½ï¿½ï¿½ï¿½ ï¿½È³ï¿½ï¿½ï¿½ Ã³ï¿½ï¿½
 		
 		for(int i = 0 ; i < N-1 ; i++) {
 			int first = sc.nextInt();
@@ -23,13 +23,13 @@ public class Q11725 {
 			
 			list[first].add(second);
 			list[second].add(first);
-		}//³ëµå ¿¬°áÇÏ±â
+		}//ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï±ï¿½
 		
-		parent = new int[N+1];	//ºÎ¸ð ¼ÒÈ¯
+		parent = new int[N+1];	//ï¿½Î¸ï¿½ ï¿½ï¿½È¯
 		
-		//Queue¸¦ ÀÌ¿ëÇÏ¿© ´ÙÀ½ ¼ýÀÚ¸¦ ±¸ÇÔ
+		//Queueï¿½ï¿½ ï¿½Ì¿ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ú¸ï¿½ ï¿½ï¿½ï¿½ï¿½
 		Queue<Integer> q = new LinkedList<>();
-		q.add(1);	//·çÆ®
+		q.add(1);	//ï¿½ï¿½Æ®
 		parent[1] = 1;
 		while(!q.isEmpty()) {
 			int now = q.poll();

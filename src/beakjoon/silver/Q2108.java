@@ -1,4 +1,4 @@
-package algo;
+package beakjoon.silver;
 
 import java.util.Arrays;
 import java.util.Comparator;
@@ -19,9 +19,9 @@ public class Q2108 {
 		}
 		int[] sort = Arrays.copyOf(arr, N);
 		Arrays.sort(sort);
-		System.out.println(Math.round((double)sum/N));	//»ê¼úÆò±Õ
-		System.out.println(sort[N/2]);	//Áß¾Ó°ª
-		if(N > 1) {	//ÃÖºó°ª
+		System.out.println(Math.round((double)sum/N));	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		System.out.println(sort[N/2]);	//ï¿½ß¾Ó°ï¿½
+		if(N > 1) {	//ï¿½Öºï¿½
 			PriorityQueue<int[]> pq = new PriorityQueue<>(new Comparator<int[]>() {
 				@Override
 				public int compare(int[] o1, int[] o2) {
@@ -52,7 +52,7 @@ public class Q2108 {
 		}else {
 			System.out.println(sort[0]);
 		}
-		System.out.println(sort[N-1]-sort[0]);	//¹üÀ§
+		System.out.println(sort[N-1]-sort[0]);	//ï¿½ï¿½ï¿½ï¿½
 		
 	}
 }
