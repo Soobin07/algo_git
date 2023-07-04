@@ -45,8 +45,7 @@ public class Q2485 {
 		}
 		
 		//최소공배수 찾아서 사이 메꿔주기
-		ans = ((arr[N-1]-arr[0])/shortist) - (N-2) -1;
-		
+		ans = ((arr[N-1]-arr[0])/shortist) - (N-1);
 		System.out.println(ans);
 	}
 }
