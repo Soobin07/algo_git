@@ -2,6 +2,7 @@ package beakjoon.bronze;
 
 import java.util.Scanner;
 
+//둘 다 가능.
 public class Q2745 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
