@@ -27,8 +27,8 @@ public class Q16916 {
 			if (origin.charAt(i) == pattern.charAt(idx)) {
 				// 패턴의 첫 글자와 origin의 i번째 글자가 같으면
 				if (idx == l2 - 1) {// 패턴 문자의 마지막 글자인 경우
-					idx = table[idx]; // 앞의 문자 어디로 돌아가야 하는지 정한다
-					return 1;
+					idx = table[idx];
+					return 1; // 전체 한바퀴 돈 거니까 패턴이 들어있는것!
 				} else { // 다음 글자를 본다
 					idx += 1;
 				}
@@ -46,6 +46,8 @@ public class Q16916 {
 		int idx = 0;
 		for (int i = 1; i < n; i++) { // 패턴문자 안에서 패턴 확인
 			while (idx > 0 && pattern.charAt(i) != pattern.charAt(idx)) {
+				// 패턴의 i번째 문자와 idx번째 문자가 다르면
+				// 가장 최근까지 같았던 곳으로 이동해서 다시 비교
 				idx = table[idx - 1];
 			}
 			if (pattern.charAt(i) == pattern.charAt(idx)) {
