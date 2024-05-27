@@ -11,8 +11,8 @@ public class Q1138 {
 		int N = Integer.parseInt(br.readLine());
 		StringTokenizer st = new StringTokenizer(br.readLine());
 
-		int[] left = new int[N];
-		int[] arr = new int[N];
+		int[] left = new int[N];	//만약을 위해서 메모라이징 (사실 필요 없음)
+		int[] arr = new int[N];		//실제 줄을 선 순서
 
 		for (int i = 0; i < N; i++) {
 			left[i] = Integer.parseInt(st.nextToken());

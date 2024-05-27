@@ -10,6 +10,8 @@ public class Q1059 {
 	/*
 	 * 1. 제외 해야 하는 정수 집합 S를 받은 후 숫자 크기대로 Sort한다 2. S에서 반드시 포함되어야 하는 숫자 n이 들어있는 구간을
 	 * 확인한다 3. 구간의 가장 작은 숫자를 시작으로, n이 들어있게 A:B 구간을 만들어 CNT 한다
+	 * 
+	 * => 브루트포스, 정렬
 	 */
 
 	public static void main(String[] args) throws Exception {
