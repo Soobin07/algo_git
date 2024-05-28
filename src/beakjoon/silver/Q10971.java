@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
+//외판원 순회 2
 public class Q10971 {
 	static int[][] cost;
 	static boolean[] visit;

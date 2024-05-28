@@ -3,6 +3,7 @@ package beakjoon.platinum;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+//찾기
 public class Q1786 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);

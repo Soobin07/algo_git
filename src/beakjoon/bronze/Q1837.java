@@ -4,6 +4,7 @@ import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+//암호제작
 public class Q1837 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);

@@ -8,7 +8,7 @@ public class Q2523 {
 		StringBuffer sb = new StringBuffer();
 		
 		int N = sc.nextInt();
-		for(int i = 0 ; i < N ; i++) {
+		for(int i = 0 ;  i < N ; i++) {
 			for(int j = 0 ; j <= i ; j++) {
 				sb.append("*");
 			}

@@ -2,6 +2,7 @@ package beakjoon.bronze;
 
 import java.util.Scanner;
 
+//그릇
 public class Q7567 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
@@ -17,7 +18,7 @@ public class Q7567 {
 			}
 			ch = str.charAt(i);
 		}
-		
+
 		System.out.println(height);
 	}
 }

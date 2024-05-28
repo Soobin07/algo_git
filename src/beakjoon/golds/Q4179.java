@@ -7,6 +7,16 @@ import java.util.Queue;
 import java.util.StringTokenizer;
 
 //불!
+/*
+ * BFS를 사용하였다.
+ * 불과 지훈이를 2개의 while문으로 따로 이동시켰는데,
+ * 지훈이 Q를 while 조건으로 두고 불,지훈이 Q를 따로 관리하였으면
+ * 하나의 while문으로도 가능했을 것 같다.
+ * 
+ * 지훈이가 한명만 존재하고, 불은 여러개 존재할 수 있었는데
+ * 불이 2개 이상인 것을 간과하여 여러번 틀렸다.
+ * 또 불과 지훈이가 동시에 같은 곳에 도착하면 지훈이가 불에 타는 것을 간과하였다.
+ */
 public class Q4179 {
 	static int R, C;
 

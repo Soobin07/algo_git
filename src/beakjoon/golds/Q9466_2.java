@@ -4,15 +4,12 @@ import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
-import java.util.Stack;
 import java.util.StringTokenizer;
 
-//78에서 실패
 public class Q9466_2 {
 	static boolean[] used, visit;
 	static int[] arr;
-	static int n, ans;
-	static Stack<Integer> stack;
+	static int n, ans; // ans = 사용된 팀원 수
 
 	public static void main(String[] args) throws Exception {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -20,7 +17,6 @@ public class Q9466_2 {
 		StringTokenizer st = null;
 
 		int T = Integer.parseInt(br.readLine());
-		stack = new Stack<>();
 		while (T-- > 0) {
 			n = Integer.parseInt(br.readLine());
 			ans = 0;
@@ -34,7 +30,7 @@ public class Q9466_2 {
 
 			// 처음부터 돌자
 			for (int i = 1; i <= n; i++) {
-				if (!visit[i])
+				if (!visit[i]) 
 					dfs(i);
 			}
 			bw.append((n - ans) + "\n");
@@ -45,7 +41,7 @@ public class Q9466_2 {
 	}
 
 	static void dfs(int start) {
-		if (used[start])
+		if (used[start])	
 			return;
 		if (visit[start]) {
 			used[start] = true;
