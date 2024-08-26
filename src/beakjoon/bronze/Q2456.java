@@ -24,7 +24,7 @@ public class Q2456 {
 			for (int i = 0; i < 3; i++) {
 				int tmp = Integer.parseInt(st.nextToken());
 				arr.get(i)[1] += tmp;
-				arr.get(i)[5 - tmp]++;
+				arr.get(i)[5 - tmp]++; // 앞에서부터 3, 2, 1 만들기 위해
 			}
 		}
 
@@ -44,6 +44,7 @@ public class Q2456 {
 					big.add(arr.get(n));
 				}
 			}
+			// 제일 큰게 하나만 있으면
 			if (big.size() == 1) {
 				System.out.println(big.get(0)[0] + " " + big.get(0)[1]);
 				break;
