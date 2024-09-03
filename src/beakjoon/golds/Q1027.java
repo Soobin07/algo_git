@@ -20,11 +20,12 @@ public class Q1027 {
 		int max = 0;
 
 		// 좌, 우 기울기 구하기
+		// 가로선 기울기 = 0 , / = +, \ = -
 		for (int n = 0; n < N; n++) {
 			int cnt = 0;
 			double tmp = 0;
 
-			// 좌
+			// 좌 (바로 옆에 것 보다는 기울기가 더 작아야 보인다)
 			for (int i = n - 1; i >= 0; i--) {
 				double s = (double) (arr[n] - arr[i]) / (n - i);
 				if (i == n - 1 || tmp > s) {
@@ -33,7 +34,7 @@ public class Q1027 {
 				}
 			}
 
-			// 우
+			// 우 (바로 옆의 것 보다는 더 커야 보인다)
 			for (int i = n + 1; i < N; i++) {
 				double s = (double) (arr[n] - arr[i]) / (n - i);
 				if (i == n + 1 || tmp < s) {
