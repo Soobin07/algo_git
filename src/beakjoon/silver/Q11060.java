@@ -5,8 +5,11 @@ import java.io.BufferedWriter;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.StringTokenizer;
 
+//점프점프
 public class Q11060 {
 	public static void main(String[] args) throws Exception {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -21,20 +24,20 @@ public class Q11060 {
 			arr[i] = Integer.parseInt(st.nextToken());
 		}
 
-		long[] dp = new long[1001];
+		long[] dp = new long[N + 1];
 		Arrays.fill(dp, Integer.MAX_VALUE);
 		dp[1] = 0;
-		for (int i = 1; i <= N; i++) {
-			if (dp[i] >= Integer.MAX_VALUE)
-				continue;
-			for (int j = 1; j <= arr[i]; j++) {
-				dp[i + j] = Math.min(dp[i + j], dp[i] + 1);
+
+		for (int i = 1; i < N; i++) {
+			long cnt = dp[i];
+			for (int j = 1; j <= arr[i] && (i + j) <= N; j++) {
+				dp[i + j] = Math.min(cnt + 1, dp[i + j]);
 			}
 		}
 
 		if (dp[N] >= Integer.MAX_VALUE)
 			System.out.println(-1);
 		else
-			System.out.println(dp[N - 1]);
+			System.out.println(dp[N]);
 	}
 }
