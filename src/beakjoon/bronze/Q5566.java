@@ -27,7 +27,6 @@ public class Q5566 {
                 System.out.println(i);
                 return;
             }
-
             current += board[current];
 
             if (current >= N) {
