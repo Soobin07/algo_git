@@ -35,18 +35,16 @@ public class Q2037 {
         for (int i = 0; i < str.length(); i++) {
             char c = str.charAt(i);
             
-            int currButton;
-            int currPress;
-            
             if (c == ' ') {
-                currButton = -1;
-                currPress = 1;
-            } else {
-                currButton = button[c - 'A'];
-                currPress = press[c - 'A'];
+                total += p;
+                prevButton = -1; 
+                continue;
             }
             
-            if (i > 0 && currButton == prevButton) {
+            int currButton = button[c - 'A'];
+            int currPress = press[c - 'A'];
+            
+            if (currButton == prevButton) {
                 total += w;
             }
             
